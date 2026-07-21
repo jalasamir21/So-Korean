@@ -17,7 +17,21 @@
 }
 
 *{ box-sizing: border-box; }
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
 
+.logo {
+    width: 60px;          /* Change to 50px if you want it even smaller */
+    height: 60px;
+    border-radius: 50%;   /* Makes it a circle */
+    object-fit: cover;    /* Prevents stretching */
+    border: 2px solid #fff; /* Optional */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Optional */
+}
 body{
   margin: 0;
   min-height: 100vh;
