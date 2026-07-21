@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SoKorean — Cosmetics Cost Calculator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scene">
+
+  <header class="brand">
+    <span class="brand__mark">쏘</span>
+    <div class="brand__text">
+      <h1>SoKorean</h1>
+      <p>cosmetics cost calculator</p>
+    </div>
+  </header>
+
+  <!-- swatch progress tracker -->
+  <div class="tracker" id="tracker">
+    <div class="tracker__step is-active" data-step="1">
+      <span class="tracker__dot"></span>
+      <span class="tracker__label">Platform</span>
+    </div>
+    <div class="tracker__line"></div>
+    <div class="tracker__step" data-step="2">
+      <span class="tracker__dot"></span>
+      <span class="tracker__label">Order &amp; total</span>
+    </div>
+  </div>
+
+  <main class="stage">
+
+    <!-- PAGE 1 — platform choice -->
+    <section class="page is-active" id="page-1">
+      <h2 class="page__title">Where's the order from?</h2>
+      <p class="page__hint">Pick a platform to see its order options.</p>
+
+      <div class="platform-grid">
+        <button class="platform-card" data-platform="style_korean" type="button">
+          <span class="platform-card__swatch swatch--jade"></span>
+          <span class="platform-card__name">StyleKorean</span>
+          <span class="platform-card__desc">Time Deal or standard pricing</span>
+        </button>
+
+        <button class="platform-card" data-platform="yes_style" type="button">
+          <span class="platform-card__swatch swatch--berry"></span>
+          <span class="platform-card__name">YesStyle</span>
+          <span class="platform-card__desc">With or without a discount code</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- PAGE 2 — order type + calculator -->
+    <section class="page" id="page-2">
+      <button class="back-link" id="backBtn" type="button">&larr; <span id="platformChosenLabel">Change platform</span></button>
+
+      <h2 class="page__title" id="page2Title">Order details</h2>
+
+      <div class="card">
+
+        <fieldset class="radio-group" id="orderTypeGroup">
+          <legend>Order type</legend>
+          <!-- radio options injected by script.js -->
+        </fieldset>
+
+        <label class="field" for="price">
+          Product price
+          <div class="input-affix">
+            <span>$</span>
+            <input type="number" id="price" placeholder="0.00" min="0" step="0.01">
+          </div>
+        </label>
+
+        <label class="field" for="weight">
+          Weight
+          <div class="input-affix">
+            <input type="number" id="weight" placeholder="0" min="0" step="1">
+            <span>g</span>
+          </div>
+        </label>
+
+        <button class="btn-primary" id="calculateBtn" type="button">Calculate total</button>
+      </div>
+
+      <div class="result" id="result">
+        <h3>Price summary</h3>
+
+        <div class="result__row">
+          <span>Product price</span>
+          <span id="outProductPrice">—</span>
+        </div>
+
+        <hr>
+
+        <div class="result__total">
+          <span>Total</span>
+          <span id="outTotalEGP">—</span>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
