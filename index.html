@@ -3,21 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SoKorean — Cosmetics Cost Calculator</title>
+<!-- <div class="logo-container">
+    <img src="assets/logo.png" alt="SoKorean Logo" class="logo">
+    <h1>SoKorean Cosmetics Calculator</h1>
+</div> -->
+<!-- <title>SoKorean — Cosmetics Cost Calculator</title> -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="icon" href="/assets/logo.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/logo.png">
 </head>
 <body>
 
 <div class="scene">
 
   <header class="brand">
-    <span class="brand__mark">쏘</span>
+    <div class="logo-container">
+        <img src="assets/logo.png" alt="SoKorean Logo" class="logo">
+        <h1>So Korean </h1>
+    </div>
     <div class="brand__text">
-      <h1>SoKorean</h1>
-      <p>cosmetics cost calculator</p>
+      <!-- <h1>SoKorean</h1> -->
+      <!-- <p>cosmetics cost calculator</p> -->
     </div>
   </header>
 
@@ -43,13 +52,13 @@
 
       <div class="platform-grid">
         <button class="platform-card" data-platform="style_korean" type="button">
-          <span class="platform-card__swatch swatch--jade"></span>
+          <span class="platform-card__swatch swatch--berry"></span>
           <span class="platform-card__name">StyleKorean</span>
           <span class="platform-card__desc">Time Deal or standard pricing</span>
         </button>
 
         <button class="platform-card" data-platform="yes_style" type="button">
-          <span class="platform-card__swatch swatch--berry"></span>
+          <span class="platform-card__swatch swatch--jade"></span>
           <span class="platform-card__name">YesStyle</span>
           <span class="platform-card__desc">With or without a discount code</span>
         </button>
