@@ -2,9 +2,9 @@
    EDITABLE RATES
    =================================================================== */
 const DOLLAR_RATE = 54;
-const SHIPPING_PER_KG = 405;   // EGP per kg
+const SHIPPING_PER_KG = 275;   // EGP per kg
 const DISCOUNT = 0.3;          // 30% off, applied on the "discounted" branch
-const PROFIT = 0.3;            // 30% profit margin
+const PROFIT = 0.25;            // 25% profit margin
 
 /*
   Order-type -> which pricing branch it uses.
@@ -16,8 +16,8 @@ const PROFIT = 0.3;            // 30% profit margin
   same mapping as the original time/non-time logic. Flip these booleans if
   YesStyle should work the other way round.
 */
-// non: price*54 + 3% + 405*weight +30% 
-// eligible for code:price*54 + 3% + 405*weight + 20%
+// non: price*54 + 3% + 275*weight +30% 
+// eligible for code:price*54 + 3% + 275*weight + 20%
 const RATES = {
   style_korean: {
     time:   { label: "Time Deal",     usesFullPrice: true , sk: true},
@@ -124,15 +124,15 @@ function calculate(){
   } else {
     serviceFee = (price - (DISCOUNT * price)) * DOLLAR_RATE;
   }
-  // non: price*54 + 3% + 405*weight +30% 
-  // eligible for code:price*54 + 3% + 405*weight + 20%
+  // non: price*54 + 3% + 275*weight +20% 
+  // eligible for code:price*54 + 3% + 275*weight + 25%
   if (cfg.eligible === true && cfg.sk === false) {
      total = serviceFee + (0.03 * serviceFee) + shipping ;
-     totalWithProfit = total + (0.2 * total);
+     totalWithProfit = total + (0.25 * total);
   }
   else if (cfg.eligible === false && cfg.sk === false) {
      total = serviceFee + (0.03 * serviceFee) + shipping ;
-     totalWithProfit = total + (0.3 * total);
+     totalWithProfit = total + (0.2 * total);
   }
   else{
      total = serviceFee + (0.03 * serviceFee) + (0.07 * (serviceFee * 0.03 + serviceFee)) + shipping;
