@@ -128,11 +128,11 @@ function calculate(){
   // eligible for code:price*54 + 3% + 275*weight + 25%
   if (cfg.eligible === true && cfg.sk === false) {
      total = serviceFee + (0.03 * serviceFee) + shipping ;
-     totalWithProfit = total + (0.25 * total);
+     totalWithProfit = total + (0.2 * total);
   }
   else if (cfg.eligible === false && cfg.sk === false) {
      total = serviceFee + (0.03 * serviceFee) + shipping ;
-     totalWithProfit = total + (0.2 * total);
+     totalWithProfit = total + (0.25 * total);
   }
   else{
      total = serviceFee + (0.03 * serviceFee) + (0.07 * (serviceFee * 0.03 + serviceFee)) + shipping;
