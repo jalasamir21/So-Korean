@@ -1,9 +1,9 @@
 /* ===================================================================
    EDITABLE RATES
    =================================================================== */
-const DOLLAR_RATE = 55.5;
-const SHIPPING_PER_KG = 275;   // EGP per kg
-const DISCOUNT = 0.2;          // 20% off, applied on the "discounted" branch
+const DOLLAR_RATE = 56.5;
+const SHIPPING_PER_KG = 320;   // EGP per kg
+const DISCOUNT = 0.25;          // 25% off, applied on the "discounted" branch
 const PROFIT = 0.25;            // 25% profit margin
 
 /*
@@ -16,8 +16,8 @@ const PROFIT = 0.25;            // 25% profit margin
   same mapping as the original time/non-time logic. Flip these booleans if
   YesStyle should work the other way round.
 */
-// non: price*55.5 + 3% + 275*weight +30% 
-// eligible for code:price*55.5 + 3% + 275*weight + 20%
+// non: price*56.5 + 3% + 320*weight +30% 
+// eligible for code:price*56.5 + 3% + 320*weight + 20%
 const RATES = {
   style_korean: {
     time:   { label: "Time Deal",     usesFullPrice: true , sk: true},
